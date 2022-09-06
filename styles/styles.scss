@@ -1,0 +1,57 @@
+@import 'masked-icons';
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+}
+
+.main-title {
+    font-size: 64px;
+    text-align: center;
+}
+
+.examples-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    max-width: 720px;
+    gap: 20px;
+    list-style: none;
+}
+
+.masked-icon_battery-empty:hover {
+    animation: batteryCharging 2500ms ease-out infinite;
+}
+
+.masked-icon_settings:hover {
+    transform: rotate(45deg);
+
+    &:active {
+        background-color: tomato;
+    }
+}
+
+@keyframes batteryCharging {
+    0% {
+        -webkit-mask: url("../assets/icons/battery-empty.svg") no-repeat center / contain;
+                mask: url("../assets/icons/battery-empty.svg") no-repeat center / contain;
+    }
+    25% {
+        -webkit-mask: url("../assets/icons/battery-half.svg") no-repeat center / contain;
+                mask: url("../assets/icons/battery-half.svg") no-repeat center / contain;
+    }
+    50% {
+        -webkit-mask: url("../assets/icons/battery-full.svg") no-repeat center / contain;
+                mask: url("../assets/icons/battery-full.svg") no-repeat center / contain;
+    }
+    80% {
+        -webkit-mask: url("../assets/icons/battery-empty.svg") no-repeat center / contain;
+                mask: url("../assets/icons/battery-empty.svg") no-repeat center / contain;
+    }
+}

@@ -1,0 +1,45 @@
+.masked-icon {
+    display: inline-block;
+    width: 86px;
+    height: 86px;
+    background-color: hsl(0, 0%, 75%);
+    transition: background-color 125ms, transform 125ms;
+
+    &:hover {
+        background-color: hsl(0, 0%, 50%);
+    }
+
+    &:active {
+        background-color: hsl(0, 0%, 25%);
+    }
+
+    &_battery-empty {
+        -webkit-mask: url("../assets/icons/battery-empty.svg") no-repeat center / contain;
+                mask: url("../assets/icons/battery-empty.svg") no-repeat center / contain;
+    }
+
+    &_battery-half {
+        -webkit-mask: url("../assets/icons/battery-half.svg") no-repeat center / contain;
+                mask: url("../assets/icons/battery-half.svg") no-repeat center / contain;
+    }
+
+    &_battery-full {
+        -webkit-mask: url("../assets/icons/battery-full.svg") no-repeat center / contain;
+                mask: url("../assets/icons/battery-full.svg") no-repeat center / contain;
+    }
+
+    &_eye {
+        -webkit-mask: url("../assets/icons/eye.svg") no-repeat center / contain;
+                mask: url("../assets/icons/eye.svg") no-repeat center / contain;
+    }
+
+    &_eye-close {
+        -webkit-mask: url("../assets/icons/eye-cross.svg") no-repeat center / contain;
+                mask: url("../assets/icons/eye-cross.svg") no-repeat center / contain;
+    }
+
+    &_settings {
+        -webkit-mask: url("../assets/icons/settings.svg") no-repeat center / contain;
+                mask: url("../assets/icons/settings.svg") no-repeat center / contain;
+    }
+}
